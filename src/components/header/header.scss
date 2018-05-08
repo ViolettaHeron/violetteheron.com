@@ -1,19 +1,30 @@
-.general-header {
+@import '../../scss/mixins.scss';
+@import '../../scss/flex.scss';
+
+.general-header--container {
     width            : 100%;
-    padding          : 20px;
     background-color : #2C2C2C;
 }
 
-.header-menu {
-    margin-top : 20px;
+.general-header {
+    max-width     : 1300px;
+    margin        : 0 auto;
+    border-bottom : #8697CB 3px solid;
+}
+
+.general-header--menu {
+    padding : 10px 20px;
+    @include flexbox;
+    @include flex-wrap(wrap);
 
     a {
-        padding          : 5px 20px;
-        margin-right     : 10px;
+        padding          : 7px 23px;
+        margin-right     : 12px;
         background-color : #FAFAFA;
         border-radius    : 30px;
         text-decoration  : none;
         color            : #2C2C2C;
+        margin-bottom    : 10px;
     }
 
     a:hover {
@@ -25,4 +36,25 @@
         background-color : #8697CB;
         color            : #1E1E1E;
     }
+}
+
+.general-header--title-container {
+    padding : 10px 20px;
+
+}
+
+.general-header--title--logo {
+    width          : 80px;
+    height         : 80px;
+    display        : inline-block;
+    vertical-align : middle;
+}
+
+.general-header--title {
+    display        : inline-block;
+    vertical-align : middle;
+    padding        : 15px 15px 15px 20px;
+    @include calc(width, '100% - 80px - 40px');
+
+    color          : #EBEBEB;
 }
