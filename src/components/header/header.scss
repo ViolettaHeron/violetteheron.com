@@ -1,0 +1,28 @@
+.general-header {
+    width            : 100%;
+    padding          : 20px;
+    background-color : #2C2C2C;
+}
+
+.header-menu {
+    margin-top : 20px;
+
+    a {
+        padding          : 5px 20px;
+        margin-right     : 10px;
+        background-color : #FAFAFA;
+        border-radius    : 30px;
+        text-decoration  : none;
+        color            : #2C2C2C;
+    }
+
+    a:hover {
+        background-color : #DEDEDE;
+        color            : #1E1E1E;
+    }
+
+    a.selected {
+        background-color : #8697CB;
+        color            : #1E1E1E;
+    }
+}

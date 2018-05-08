@@ -1,5 +1,5 @@
 import React from 'react';
-import Ursa from './ursa-major.svg'
+import Ursa  from './ursa-major.svg'
 import "./logo.css"
 
 class Logo extends React.Component{
