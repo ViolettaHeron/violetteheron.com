@@ -19,7 +19,7 @@ class Header extends React.Component {
                         <Link to="/">Home</Link>
                         <Link to="/projects">Projects</Link>
                         <Link to="/CV">CV</Link>
-                        <a href="https://github.com/VioletteHeron/" target="_blank">Github</a>
+                        <a href="https://github.com/VioletteHeron/" target="_blank" rel="noopener noreferrer" >Github</a>
                     </nav>
                 </div>
             </header>
