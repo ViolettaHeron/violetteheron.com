@@ -1,0 +1,60 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/mixins.scss';
+
+$spaceship-size : 60px;
+$trail-width : 2px;
+$spaceship-middle : $spaceship-size / 2 - ($trail-width / 2);
+
+.timeline {
+    margin    : 20px;
+    max-width : 320px;
+}
+
+.timeline--spaceship-container {
+    width : $spaceship-size;
+
+    img {
+        width : 100%;
+    }
+}
+
+.timeline--items-container {
+
+    /* spaceship trail */
+    border-left : $highlights $trail-width solid;
+    margin      : -$spaceship-middle $spaceship-middle;
+    padding     : $spaceship-middle+15 0 2px 0;
+}
+
+.timeline--item {
+    position     : relative;
+    padding-left : 30px;
+    line-height  : 22px;
+
+    &:after {
+        content          : "";
+        background-color : $highlights-minor;
+        border           : $highlights solid 2px;
+        border-radius    : 100%;
+        display          : block;
+
+        width            : 5px;
+        height           : 5px;
+
+        position         : absolute;
+        left             : -5px;
+        top              : 50%;
+    }
+}
+
+.timeline--item:nth-child(3n+2):after {
+    height : 7px;
+    width  : 7px;
+    left   : -6px;
+}
+
+.timeline--item:nth-child(3n):after {
+    height : 3px;
+    width  : 3px;
+    left   : -4px;
+}

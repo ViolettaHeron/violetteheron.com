@@ -1,0 +1,8 @@
+@import '../../scss/variables.scss';
+
+.CV-container {
+    max-width  : $max-app-width;
+    width      : 100%;
+    margin     : auto;
+    border-top : none;
+}

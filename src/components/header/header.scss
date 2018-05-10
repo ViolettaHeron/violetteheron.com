@@ -1,5 +1,6 @@
 @import '../../scss/mixins.scss';
 @import '../../scss/flex.scss';
+@import '../../scss/variables.scss';
 
 .general-header--container {
     width            : 100%;
@@ -7,7 +8,7 @@
 }
 
 .general-header {
-    max-width     : 1300px;
+    max-width     : $max-app-width;
     margin        : 0 auto;
     border-bottom : #8697CB 3px solid;
 }
@@ -32,7 +33,7 @@
         color            : #1E1E1E;
     }
 
-    a.selected {
+    a.active {
         background-color : #8697CB;
         color            : #1E1E1E;
     }

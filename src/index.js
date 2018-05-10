@@ -4,6 +4,8 @@ import {Provider}        from 'react-redux';
 import {ConnectedRouter} from 'react-router-redux';
 import store, {history}  from './store';
 import App               from './containers/app';
+import I18n              from 'redux-i18n';
+import {translations}    from './translations';
 
 import './index.css';
 
@@ -12,9 +14,9 @@ const target = document.querySelector('#root');
 render(
     <Provider store={store}>
         <ConnectedRouter history={history}>
-            <div>
+            <I18n translations={translations} initialLang="fr" >
                 <App/>
-            </div>
+            </I18n>
         </ConnectedRouter>
     </Provider>,
     target

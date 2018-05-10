@@ -1,11 +1,11 @@
-import React  from 'react';
-import Logo   from '../../components/logo';
-import {Link} from 'react-router-dom';
+import React from 'react';
+import Logo  from '../../components/logo';
 import './header.css';
 
 class Header extends React.Component {
 
     render() {
+
         return (
             <header className="general-header--container">
                 <div className="general-header">
@@ -15,16 +15,24 @@ class Header extends React.Component {
                         </div>
                         <h1 className="general-header--title">Violette Héron</h1>
                     </div>
-                    <nav className="general-header--menu">
-                        <Link to="/">Home</Link>
-                        <Link to="/projects">Projects</Link>
-                        <Link to="/CV">CV</Link>
-                        <a href="https://github.com/VioletteHeron/" target="_blank" rel="noopener noreferrer" >Github</a>
-                    </nav>
                 </div>
             </header>
         );
     }
 }
+
+/*
+
+import {NavLink} from 'react-router-dom';
+
+    <nav className="general-header--menu">
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/projects">Projects</NavLink>
+        <NavLink to="/CV">CV</NavLink>
+        <a href="https://github.com/VioletteHeron/" target="_blank" rel="noopener noreferrer">Github</a>
+    </nav>
+
+
+ */
 
 export default Header;
