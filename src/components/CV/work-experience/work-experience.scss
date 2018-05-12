@@ -1,0 +1,90 @@
+@import "../../../scss/variables.scss";
+@import "../../../scss/mixins.scss";
+
+$dateWIdth : 140px;
+
+.jobs--container {
+    display : inline-block;
+}
+
+.job--container {
+    display : block;
+    margin  : 0 0 25px 0;
+
+    p {
+        margin : 0 0 4px 0;
+        color  : #515151;
+    }
+}
+
+.jobs--date-container {
+    display        : inline-block;
+    width          : $dateWIdth;
+    vertical-align : top;
+}
+
+p.job--when {
+    line-height      : 28px;
+    font-size        : 18px;
+    padding          : 3px 22px;
+    background-color : $highlights;
+    display          : inline-block;
+    border-radius    : 30px;
+    color            : $dark-highlights;
+}
+
+.jobs--description-container {
+    display        : inline-block;
+    vertical-align : middle;
+    padding        : 2px 0 3px 12px;
+
+    @include calc(width, '100% - ' $dateWIdth)
+}
+
+p.job--label {
+    display   : block;
+    font-size : 21px;
+    color     : $dark-highlights;
+}
+
+.job--where {
+    display       : inline-block;
+    padding-right : 10px;
+}
+
+.job--compagny {
+    display       : inline-block;
+    padding-right : 10px;
+}
+
+.job--duration {
+    display       : inline-block;
+    padding-right : 10px;
+}
+
+p.job--details {
+    display       : inline-block;
+    padding-right : 10px;
+    color         : $dark-highlights
+}
+
+p.job--description {
+    &:after {
+        content      : "-";
+        padding-left : 10px;
+    }
+
+    &:last-of-type:after {
+        content : "";
+        padding : 0;
+    }
+}
+
+@media (max-width : 500px) {
+
+    .jobs--description-container {
+        padding : 0;
+        display : block;
+        width   : 100%;
+    }
+}

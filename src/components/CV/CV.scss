@@ -1,8 +1,37 @@
 @import '../../scss/variables.scss';
+@import '../../scss/flex.scss';
 
 .CV-container {
-    max-width  : $max-app-width;
-    width      : 100%;
-    margin     : auto;
-    border-top : none;
+    max-width      : $max-app-width;
+    width          : 100%;
+    margin         : auto auto 30px;
+    border-top     : none;
+    vertical-align : top;
+
+    @include flexbox;
+    @include justify-content(space-around);
+    @include flex-wrap(wrap);
+}
+
+.timeline--container {
+    max-width      : 320px;
+    margin         : 20px;
+    display        : inline-block;
+    vertical-align : top;
+
+    @include flex(320px 0 0);
+}
+
+.work--container {
+    display        : inline-block;
+    vertical-align : top;
+    margin         : 20px;
+
+    @include flex(480px 0 0);
+}
+
+@media (max-width : 500px) {
+    .timeline--container, .work--container {
+        margin : 10px 0 10px 10px
+    }
 }

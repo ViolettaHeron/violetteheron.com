@@ -6,8 +6,7 @@ $trail-width : 2px;
 $spaceship-middle : $spaceship-size / 2 - ($trail-width / 2);
 
 .timeline {
-    margin    : 20px;
-    max-width : 320px;
+    position : relative;
 }
 
 .timeline--spaceship-container {
@@ -16,6 +15,13 @@ $spaceship-middle : $spaceship-size / 2 - ($trail-width / 2);
     img {
         width : 100%;
     }
+}
+
+.timeline--title {
+    position    : absolute;
+    top         : 0;
+    line-height : 60px;
+    margin      : 0 0 0 80px;
 }
 
 .timeline--items-container {
@@ -57,4 +63,11 @@ $spaceship-middle : $spaceship-size / 2 - ($trail-width / 2);
     height : 3px;
     width  : 3px;
     left   : -4px;
+}
+
+@media (max-width : 500px) {
+
+    .timeline--items-container {
+        margin-right : 15px;
+    }
 }

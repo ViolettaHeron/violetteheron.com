@@ -13,6 +13,7 @@ class Timeline extends React.Component {
                 <div className="timeline--spaceship-container">
                     <img src={spaceShip} alt="space ship"/>
                 </div>
+                <h2 className="timeline--title">Etudes</h2>
                 <div className="timeline--items-container">
                     {this.props.studies.map((item, i) => (
                         <div key={i} className="timeline--item">
