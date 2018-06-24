@@ -1,7 +1,7 @@
 {
     "name": "violetteheron.com",
     "version": "0.1.0",
-    "homepage": "/new",
+    "homepage": "/",
     "private": true,
     "dependencies": {
         "history": "^4.7.2",

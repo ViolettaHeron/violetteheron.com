@@ -1,20 +1,89 @@
 @import '../../../../scss/variables.scss';
+@import '../../../../scss/mixins.scss';
+
+@keyframes sheen {
+    0% {
+        transform : skewY(-45deg) translateX(0);
+    }
+    100% {
+        transform : skewY(-45deg) translateX(12.5em);
+    }
+}
 
 .study-items--container {
-    border-left   : solid 3px $highlights;
+    border-left   : solid 2px $highlights;
     margin-bottom : 10px;
     padding       : 9px 9px 9px 13px;
+    cursor        : pointer;
 
     p {
         line-height : 18px;
         margin      : 0 0 3px 0;
     }
+
+    .stydy-item--growing {
+        content          : "";
+        position         : absolute;
+        height           : 100%;
+        top              : 0;
+        left             : 30px;
+        width            : 0;
+        background-color : $highlights;
+        @include transition(width 0.3s);
+        overflow         : hidden;
+
+        z-index          : -1;
+
+        &:before, &:after {
+            content          : "";
+            background-color : rgba(255, 255, 255, 0.5);
+            height           : 100%;
+            width            : 30px;
+            display          : block;
+            position         : absolute;
+            top              : 0;
+            left             : -4.5em;
+            transform        : skewX(-45deg) translateX(0);
+            transition       : none;
+            @include transition(all 0.3s);
+        }
+    }
+
+    &:hover .stydy-item--growing {
+        width : 100%;
+        @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.12));
+
+        &:before {
+            transform  : skewX(-45deg) translateX(19em);
+            transition : all 0.5s ease-in-out;
+        }
+
+        &:after {
+            width      : 18px;
+            transform  : skewX(-45deg) translateX(21.5em);
+            transition : all 0.5s ease-in-out;
+        }
+
+    }
+
+    &:after {
+        content       : "";
+        position      : absolute;
+        width         : 32px;
+        height        : 50%;
+        left          : -2px;
+        top           : 2px;
+        border-bottom : solid 2px $highlights;
+        border-left   : solid 2px $highlights;
+        border-radius : 0 0 0 20px;
+    }
 }
 
 p.study-item--date {
     font-size     : 16px;
-    color         : #616161;
+    color         : $dark-highlights;
     margin-bottom : 3px;
+    opacity       : 0.9;
 }
 
 p.study-item--label {
@@ -24,10 +93,12 @@ p.study-item--label {
 
 p.study-item--detail {
     font-size : 16px;
-    color     : #616161;
+    color     : $dark-highlights;
+    opacity   : 0.9;
 }
 
 p.study-item--where {
     font-size : 16px;
-    color     : #616161;
+    color     : $dark-highlights;
+    opacity   : 0.9;
 }

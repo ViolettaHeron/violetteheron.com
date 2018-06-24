@@ -7,9 +7,8 @@ class Work extends React.Component {
 
 
     render() {
+
         const experience = this.props.work;
-
-
         return (
             <div className="jobs--container">
                 <h2>Expérience professionnelle</h2>
@@ -20,11 +19,12 @@ class Work extends React.Component {
                         </div>
                         <div className="jobs--description-container">
                             <p className="job--label">{item.label}</p>
-
                             <p className="job--description job--compagny">{item.compagny}</p>
                             <p className="job--description job--where">{item.where}</p>
+                            <br />
                             <p className="job--description job--details">{item.contractType}</p>
                             <p className="job--description job--duration">{item.duration}</p>
+
                         </div>
                     </div>
                 ))}
@@ -37,21 +37,7 @@ const mapStateToProps = state => ({
     ...state,
     'work': [
         {
-            'when'        : 'Juillet 2014',
-            'label'       : 'Surveillance de Musée',
-            'contractType': 'CDD',
-            'duration'    : '1 mois',
-            'where'       : 'Nice',
-            'compagny'    : 'Galerie de la Marine'
-        }, {
-            'when'        : '2014',
-            'label'       : 'Developpeuse Front Junior',
-            'contractType': 'Stage',
-            'duration'    : '6 mois',
-            'where'       : 'Nice',
-            'compagny'    : 'Qwant'
-        }, {
-            'when'        : '2015-2016',
+            'when'        : '2017-2018',
             'label'       : 'Developpeuse Fullstack',
             'contractType': 'Stage temps partiel',
             'duration'    : '9 mois',
@@ -65,12 +51,26 @@ const mapStateToProps = state => ({
             'where'       : 'Nice',
             'compagny'    : 'Qwant'
         }, {
-            'when'        : '2017-2018',
+            'when'        : '2015-2016',
             'label'       : 'Developpeuse Fullstack',
             'contractType': 'Stage temps partiel',
             'duration'    : '9 mois',
             'where'       : 'Nice',
             'compagny'    : 'Qwant'
+        }, {
+            'when'        : '2015',
+            'label'       : 'Developpeuse Front Junior',
+            'contractType': 'Stage',
+            'duration'    : '6 mois',
+            'where'       : 'Nice',
+            'compagny'    : 'Qwant'
+        }, {
+            'when'        : 'Juillet 2014',
+            'label'       : 'Surveillance de Musée',
+            'contractType': 'CDD',
+            'duration'    : '1 mois',
+            'where'       : 'Nice',
+            'compagny'    : 'Galerie de la Marine'
         }
     ]
 });

@@ -13,6 +13,14 @@
 
     transition: $transition;
 }
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+
+
 @mixin transform($transforms) {
     -moz-transform: $transforms;
     -o-transform: $transforms;
@@ -43,4 +51,15 @@
     -webkit-box-shadow: $value;
     -moz-box-shadow: $value;
     box-shadow: $value;
+}
+
+// https://gist.github.com/Odepia/5790397
+@mixin linear-gradient($from, $to) {
+    background: $to;
+    background: -moz-linear-gradient(top, $from 0%, $to 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to));
+    background: -webkit-linear-gradient(top, $from 0%,$to 100%);
+    background: -o-linear-gradient(top, $from 0%,$to 100%);
+    background: linear-gradient(to bottom, $from 0%,$to 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to})
 }

@@ -25,7 +25,7 @@ $dateWIdth : 140px;
 
 p.job--when {
     line-height      : 28px;
-    font-size        : 18px;
+    font-size        : 16px;
     padding          : 3px 22px;
     background-color : $highlights;
     display          : inline-block;
@@ -43,7 +43,7 @@ p.job--when {
 
 p.job--label {
     display   : block;
-    font-size : 21px;
+    font-size : 18px;
     color     : $dark-highlights;
 }
 
@@ -69,11 +69,14 @@ p.job--details {
 }
 
 p.job--description {
+    margin: 0;
+
     &:after {
         content      : "-";
         padding-left : 10px;
     }
 
+    &.job--where:after,
     &:last-of-type:after {
         content : "";
         padding : 0;

@@ -1,4 +1,5 @@
 @import "scss/variables.scss";
+@import "scss/mixins.scss";
 
 body {
     margin           : 0;
@@ -6,7 +7,7 @@ body {
     font-family      : sans-serif;
     min-width        : 320px;
     overflow-x       : hidden;
-    background-color : #F7F8F8;
+    @include linear-gradient(#C3CDFA, #D4E1FA)
 }
 
 * {
@@ -17,7 +18,11 @@ body, #root {
     min-height : 100vh;
 }
 
+h1{
+    font-size:25px;
+}
+
 h2 {
     color : $dark-highlights;
-
+    font-size:20px;
 }
