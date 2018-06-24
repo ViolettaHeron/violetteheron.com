@@ -7,9 +7,14 @@
     margin         : auto auto 30px;
     border-top     : none;
     vertical-align : top;
+}
+
+.CV-thunk{
+    margin: 35px 0;
+    width:100%;
 
     @include flexbox;
-    @include justify-content(space-around);
+    @include justify-content(space-evenly);
     @include flex-wrap(wrap);
 }
 

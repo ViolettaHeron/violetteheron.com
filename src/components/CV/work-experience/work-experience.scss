@@ -27,13 +27,13 @@ $dateWidth : 140px;
     padding          : 3px 22px;
     background-color : $highlights;
     border-radius    : 30px;
-    color            : $dark-highlights;
 }
 
 p.job--when {
     margin  : 0;
     padding : 0;
     display : inline;
+    color   : $dark-highlights;
 }
 
 .jobs--description-container {

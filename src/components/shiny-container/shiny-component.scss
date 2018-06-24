@@ -1,9 +1,10 @@
 @import '../../scss/mixins.scss';
+$transition-duration: .5s;
 
 .shiny-component {
     position : relative;
     overflow : hidden;
-    @include transition(all 0.3s);
+    @include transition(all $transition-duration);
 
     &.with-shadow {
         @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.12));
@@ -20,7 +21,7 @@
         left             : -4.5em;
         transform        : skewX(-45deg) translateX(0);
         transition       : none;
-        @include transition(all 0.3s);
+        @include transition(all $transition-duration);
     }
 }
 
@@ -39,6 +40,5 @@
 
     &:before {
         transform  : skewX(-45deg) translateX(17em);
-        transition : all 0.5s ease-in-out;
     }
 }
