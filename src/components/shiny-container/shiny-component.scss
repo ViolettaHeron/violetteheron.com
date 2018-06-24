@@ -1,0 +1,44 @@
+@import '../../scss/mixins.scss';
+
+.shiny-component {
+    position : relative;
+    overflow : hidden;
+    @include transition(all 0.3s);
+
+    &.with-shadow {
+        @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.12));
+    }
+
+    &:before {
+        content          : "";
+        background-color : rgba(255, 255, 255, 0.5);
+        height           : 100%;
+        width            : 30px;
+        display          : block;
+        position         : absolute;
+        top              : 0;
+        left             : -4.5em;
+        transform        : skewX(-45deg) translateX(0);
+        transition       : none;
+        @include transition(all 0.3s);
+    }
+}
+
+.shiny-component:hover {
+    &.is-call-to-action {
+        cursor : pointer;
+    }
+
+    &.rescale-on-hover {
+        @include transform(scale(1.05))
+    }
+
+    &.rescale-on-hover.with-shadow {
+        @include box-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
+    }
+
+    &:before {
+        transform  : skewX(-45deg) translateX(17em);
+        transition : all 0.5s ease-in-out;
+    }
+}

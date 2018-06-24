@@ -15,6 +15,7 @@
     margin-bottom : 10px;
     padding       : 9px 9px 9px 13px;
     cursor        : pointer;
+    position:relative;
 
     p {
         line-height : 18px;
@@ -26,7 +27,7 @@
         position         : absolute;
         height           : 100%;
         top              : 0;
-        left             : 30px;
+        left             : 0;
         width            : 0;
         background-color : $highlights;
         @include transition(width 0.3s);
@@ -54,13 +55,13 @@
         @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.12));
 
         &:before {
-            transform  : skewX(-45deg) translateX(19em);
+            transform  : skewX(-45deg) translateX(17em);
             transition : all 0.5s ease-in-out;
         }
 
         &:after {
             width      : 18px;
-            transform  : skewX(-45deg) translateX(21.5em);
+            transform  : skewX(-45deg) translateX(19.5em);
             transition : all 0.5s ease-in-out;
         }
 
@@ -71,7 +72,7 @@
         position      : absolute;
         width         : 32px;
         height        : 50%;
-        left          : -2px;
+        right:100%;
         top           : 2px;
         border-bottom : solid 2px $highlights;
         border-left   : solid 2px $highlights;

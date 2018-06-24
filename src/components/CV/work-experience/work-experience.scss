@@ -1,7 +1,7 @@
 @import "../../../scss/variables.scss";
 @import "../../../scss/mixins.scss";
 
-$dateWIdth : 140px;
+$dateWidth : 140px;
 
 .jobs--container {
     display : inline-block;
@@ -18,19 +18,22 @@ $dateWIdth : 140px;
 }
 
 .jobs--date-container {
-    display        : inline-block;
-    width          : $dateWIdth;
-    vertical-align : top;
-}
-
-p.job--when {
+    display          : inline-block;
+    width            : $dateWidth;
+    text-align       : center;
+    vertical-align   : top;
     line-height      : 28px;
     font-size        : 16px;
     padding          : 3px 22px;
     background-color : $highlights;
-    display          : inline-block;
     border-radius    : 30px;
     color            : $dark-highlights;
+}
+
+p.job--when {
+    margin  : 0;
+    padding : 0;
+    display : inline;
 }
 
 .jobs--description-container {
@@ -38,7 +41,7 @@ p.job--when {
     vertical-align : middle;
     padding        : 2px 0 3px 12px;
 
-    @include calc(width, '100% - ' $dateWIdth)
+    @include calc(width, '100% - ' $dateWidth)
 }
 
 p.job--label {
@@ -69,7 +72,7 @@ p.job--details {
 }
 
 p.job--description {
-    margin: 0;
+    margin : 0;
 
     &:after {
         content      : "-";

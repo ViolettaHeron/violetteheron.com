@@ -1,10 +1,9 @@
-import React     from 'react';
-import {connect} from 'react-redux';
+import React          from 'react';
+import {connect}      from 'react-redux';
+import ShinyComponent from '../../shiny-container';
 import './work-experience.css';
 
-
 class Work extends React.Component {
-
 
     render() {
 
@@ -14,14 +13,17 @@ class Work extends React.Component {
                 <h2>Expérience professionnelle</h2>
                 {experience.map((item, i) => (
                     <div className="job--container" key={i}>
-                        <div className="jobs--date-container">
-                            <p className="job--when">{item.when}</p>
-                        </div>
+                        <ShinyComponent
+                            component={() => (<p className="job--when">{item.when}</p>)}
+                            className="jobs--date-container"
+                            scaleOnHover={true}
+                            isCallToAction={true}
+                            shadow={true}/>
                         <div className="jobs--description-container">
                             <p className="job--label">{item.label}</p>
                             <p className="job--description job--compagny">{item.compagny}</p>
                             <p className="job--description job--where">{item.where}</p>
-                            <br />
+                            <br/>
                             <p className="job--description job--details">{item.contractType}</p>
                             <p className="job--description job--duration">{item.duration}</p>
 
