@@ -39,23 +39,9 @@ const mapStateToProps = state => ({
     ...state,
     'work': [
         {
-            'when'        : '2017-2018',
+            'when'        : '2015-2018',
             'label'       : 'Developpeuse Fullstack',
-            'contractType': 'Stage temps partiel',
-            'duration'    : '9 mois',
-            'where'       : 'Nice',
-            'compagny'    : 'Qwant'
-        }, {
-            'when'        : '2016-2017',
-            'label'       : 'Developpeuse Fullstack',
-            'contractType': 'CDD temps plein',
-            'duration'    : '1 an',
-            'where'       : 'Nice',
-            'compagny'    : 'Qwant'
-        }, {
-            'when'        : '2015-2016',
-            'label'       : 'Developpeuse Fullstack',
-            'contractType': 'Stage temps partiel',
+            'contractType': 'Temps partiel',
             'duration'    : '9 mois',
             'where'       : 'Nice',
             'compagny'    : 'Qwant'

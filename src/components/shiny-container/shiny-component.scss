@@ -1,5 +1,6 @@
 @import '../../scss/mixins.scss';
-$transition-duration: .5s;
+
+$transition-duration : .5s;
 
 .shiny-component {
     position : relative;
@@ -18,8 +19,8 @@ $transition-duration: .5s;
         display          : block;
         position         : absolute;
         top              : 0;
-        left             : -4.5em;
-        transform        : skewX(-45deg) translateX(0);
+        margin-left      : -100%;
+        transform        : skewX(-45deg);
         transition       : none;
         @include transition(all $transition-duration);
     }
@@ -39,6 +40,7 @@ $transition-duration: .5s;
     }
 
     &:before {
-        transform  : skewX(-45deg) translateX(17em);
+        transform   : skewX(-45deg);
+        margin-left : 60%;
     }
 }

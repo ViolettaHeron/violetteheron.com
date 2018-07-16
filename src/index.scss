@@ -2,12 +2,14 @@
 @import "scss/mixins.scss";
 
 body {
-    margin           : 0;
-    padding          : 0;
-    font-family      : sans-serif;
-    min-width        : 320px;
-    overflow-x       : hidden;
-    @include linear-gradient(#D4E1FA, #edf2fd)
+    min-width             : 320px;
+    margin                : 0;
+    padding               : 0;
+    font-family           : sans-serif;
+    overflow-x            : hidden;
+
+    @include linear-gradient(#CDDCFA, #EDF2FD);
+    background-attachment : fixed;
 }
 
 * {
@@ -18,11 +20,11 @@ body, #root {
     min-height : 100vh;
 }
 
-h1{
-    font-size:25px;
+h1 {
+    font-size : 25px;
 }
 
 h2 {
-    color : $dark-highlights;
-    font-size:20px;
+    color     : $dark-highlights;
+    font-size : 20px;
 }

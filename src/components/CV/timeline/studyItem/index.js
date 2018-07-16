@@ -1,10 +1,11 @@
 import React                from 'react';
 import './studyItem.css';
 import {connect}            from 'react-redux';
-import {openItem}           from '../../../../reducers/studies';
+import {fetchOpenItem}           from '../../../../reducers/studies';
 import {bindActionCreators} from 'redux';
 
 class Item extends React.Component {
+
     render() {
         const props = this.props;
 
@@ -22,7 +23,7 @@ class Item extends React.Component {
 
 const mapDispatchToProps = dispatch => bindActionCreators(
     {
-        openItem: openItem
+        openItem: fetchOpenItem
     }, dispatch);
 
 export default connect(null, mapDispatchToProps)(Item);

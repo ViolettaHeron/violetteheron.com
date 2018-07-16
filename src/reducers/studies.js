@@ -15,7 +15,7 @@ export default (state = {}, action) => {
     }
 }
 
-export const openItem = (label) => {
+export const fetchOpenItem = (label) => {
     return dispatch => {
         dispatch(
             {
