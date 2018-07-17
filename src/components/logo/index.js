@@ -1,11 +1,11 @@
 import React from 'react';
-import Ursa  from './ursa-major.svg'
+import Sun  from './sun.svg'
 import "./logo.css"
 
 class Logo extends React.Component{
     render = () => (
         <div>
-            <img src={Ursa} className="header-logo" alt="logo" />
+            <img src={Sun} className="header-logo" alt="logo" />
 
         </div>
     )
