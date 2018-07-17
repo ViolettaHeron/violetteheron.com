@@ -11,41 +11,64 @@
     background-attachment : fixed;
 }
 
-@keyframes slide {
+@keyframes slide_to_right {
     from {
-        background-position : 0 100%;
+        background-position : -100% 100%;
     }
     to {
+        background-position : 200% 100%;
+    }
+}
+
+@keyframes slide_to_left {
+    from {
         background-position : 100% 100%;
+    }
+    to {
+        background-position : 0 100%;
     }
 }
 
 .background--mountain-1 {
-    background      : url('./images/back_1.png') repeat-x 0 100%;
-    background-size : 50% auto;
-    height          : 100%;
-    width           : 100%;
-    position        : absolute;
-    bottom          : 0;
-    animation       : slide 60s linear infinite
+    background      : url('./images/back_1.png') repeat-x 0 50%;
+    animation       : slide_to_left 60s linear infinite;
 }
 
 .background--mountain-2 {
-    background      : url('./images/back_2.png') repeat-x 0 100%;
-    background-size : 50% auto;
-    height          : 100%;
-    width           : 100%;
-    position        : absolute;
-    bottom          : 0;
-    animation       : slide 38s linear infinite
+    background      : url('./images/back_2.png') repeat-x 0 50%;
+    animation       : slide_to_left 38s linear infinite;
 }
 
 .background--mountain-3 {
-    background      : url('./images/back_3.png') repeat-x 0 100%;
+    background      : url('./images/back_3.png') repeat-x 0 50%;
+    animation       : slide_to_left 19s linear infinite;
+}
+
+.background-mountain{
     background-size : 50% auto;
     height          : 100%;
     width           : 100%;
     position        : absolute;
     bottom          : 0;
-    animation       : slide 19s linear infinite
+}
+
+.background--cloud-1 {
+    height          : 50%;
+    background      : url('./images/cloud_1.png') no-repeat;
+    animation       : slide_to_right 130s linear infinite;
+    background-size : 30% auto;
+}
+
+.background--cloud-2 {
+    background      : url('./images/cloud_2.png') no-repeat;
+    height          : 45%;
+    animation       : slide_to_right 63s linear infinite;
+    background-size : 20% auto;
+}
+
+.background-cloud{
+    left            : 0;
+    position        : absolute;
+    width           : 100%;
+    opacity         : 0.7;
 }

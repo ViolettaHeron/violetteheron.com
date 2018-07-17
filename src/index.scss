@@ -2,19 +2,11 @@
 @import "scss/mixins.scss";
 
 body {
-    min-width             : 320px;
-    margin                : 0;
-    padding               : 0;
-    font-family           : sans-serif;
-    overflow-x            : hidden;
-}
-
-main{
-    z-index:-1;
-    max-width: $max-app-width + 40px;
-    padding: 0 20px;
-    margin: 30px auto auto;
-    background-color: #ffffff99;
+    min-width   : 320px;
+    margin      : 0;
+    padding     : 0;
+    font-family : sans-serif;
+    overflow-x  : hidden;
 }
 
 * {
@@ -32,4 +24,18 @@ h1 {
 h2 {
     color     : $dark-highlights;
     font-size : 20px;
+}
+
+main {
+    z-index          : -1;
+    max-width        : $max-app-width + 40px;
+    padding          : 0 20px;
+    margin           : 30px auto auto;
+    background-color : #FFFFFF99;
+}
+
+@media (max-width : $max-app-width + 100px) {
+    main {
+        margin : 0 auto auto;
+    }
 }
