@@ -20,6 +20,7 @@
     p {
         line-height : 18px;
         margin      : 0 0 3px 0;
+        position    : relative;
     }
 
     .stydy-item--growing {
@@ -33,7 +34,7 @@
         @include transition(width 0.3s);
         overflow         : hidden;
 
-        z-index          : -1;
+        z-index          : 0;
 
         &:before, &:after {
             content          : "";

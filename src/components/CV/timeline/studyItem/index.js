@@ -1,7 +1,5 @@
-import React                from 'react';
+import React from 'react';
 import './studyItem.css';
-import {connect}            from 'react-redux';
-import {bindActionCreators} from 'redux';
 
 class Item extends React.Component {
 
@@ -20,8 +18,4 @@ class Item extends React.Component {
     }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators(
-    {
-    }, dispatch);
-
-export default connect(null, mapDispatchToProps)(Item);
+export default Item;

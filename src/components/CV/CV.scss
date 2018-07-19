@@ -8,29 +8,34 @@
     vertical-align : top;
 }
 
-.CV-thunk{
-    margin: 35px 0;
-    width:100%;
-    padding-bottom: 50px;
+.CV-thunk {
+    margin         : 35px 0;
+    width          : 100%;
+    padding-bottom : 50px;
 
     @include flexbox;
     @include justify-content(space-evenly);
     @include flex-wrap(wrap);
+    @include align-content(center);
 }
 
 .timeline--container {
-    max-width      : 320px;
+    max-width      : 370px;
     margin         : 20px;
-    display        : inline-block;
     vertical-align : top;
 
-    @include flex(320px 0 0);
+    @include flex(370px 0 0);
 }
 
 .work--container {
-    display        : inline-block;
     vertical-align : top;
     margin         : 20px;
+
+    @include flex(480px 0 0);
+}
+
+.projects--container {
+    display : block;
 
     @include flex(480px 0 0);
 }

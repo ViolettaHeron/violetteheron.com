@@ -10,7 +10,10 @@ class Work extends React.Component {
         const experience = this.props.work;
         return (
             <div className="jobs--container">
-                <h2>Expérience professionnelle</h2>
+                <h2>
+                    <span className="icon jobs--title-icon lnr-coffee-cup"/>
+                    Expérience professionnelle
+                </h2>
                 {experience.map((item, i) => (
                     <div className="job--container" key={i}>
                         <ShinyComponent
@@ -21,7 +24,7 @@ class Work extends React.Component {
                             shadow={true}/>
                         <div className="jobs--description-container">
                             <p className="job--label">{item.label}</p>
-                            <p className="job--description job--compagny">{item.compagny}</p>
+                            <p className="job--description job--company">{item.company}</p>
                             <p className="job--description job--where">{item.where}</p>
                             <br/>
                             <p className="job--description job--details">{item.contractType}</p>
@@ -42,23 +45,23 @@ const mapStateToProps = state => ({
             'when'        : '2015-2018',
             'label'       : 'Developpeuse Fullstack',
             'contractType': 'Temps partiel',
-            'duration'    : '9 mois',
+            'duration'    : '3 ans',
             'where'       : 'Nice',
-            'compagny'    : 'Qwant'
+            'company'     : 'Qwant'
         }, {
             'when'        : '2015',
             'label'       : 'Developpeuse Front Junior',
             'contractType': 'Stage',
             'duration'    : '6 mois',
             'where'       : 'Nice',
-            'compagny'    : 'Qwant'
+            'company'     : 'Qwant'
         }, {
             'when'        : 'Juillet 2014',
             'label'       : 'Surveillance de Musée',
             'contractType': 'CDD',
             'duration'    : '1 mois',
             'where'       : 'Nice',
-            'compagny'    : 'Galerie de la Marine'
+            'company'     : 'Galerie de la Marine'
         }
     ]
 });

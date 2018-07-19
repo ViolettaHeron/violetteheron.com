@@ -7,6 +7,10 @@ $dateWidth : 140px;
     display : inline-block;
 }
 
+.jobs--title-icon {
+    margin-right : 7px;
+}
+
 .job--container {
     display : block;
     margin  : 0 0 25px 0;
@@ -27,6 +31,7 @@ $dateWidth : 140px;
     padding          : 3px 22px;
     background-color : $highlights;
     border-radius    : 30px;
+    margin           : 7px 0 12px;
 }
 
 p.job--when {
@@ -55,7 +60,7 @@ p.job--label {
     padding-right : 10px;
 }
 
-.job--compagny {
+.job--company {
     display       : inline-block;
     padding-right : 10px;
 }

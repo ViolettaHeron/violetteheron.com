@@ -1,15 +1,13 @@
 import React      from 'react';
-import spaceShip  from './images/space-ship.svg';
 import {connect}  from 'react-redux';
+import {timeline} from '../../../initialState';
+import spaceShip  from './images/space-ship.svg';
 import Item       from './studyItem';
 import './timeline.css';
-import {timeline} from '../../../initialState';
 
 class Timeline extends React.Component {
 
     render() {
-        console.log(this.props);
-
         return (
             <div className="timeline">
                 <div className="timeline--spaceship-container">
