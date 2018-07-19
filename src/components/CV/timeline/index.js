@@ -4,14 +4,8 @@ import {connect}  from 'react-redux';
 import Item       from './studyItem';
 import './timeline.css';
 import {timeline} from '../../../initialState';
-import {fetchOpenItem} from '../../../reducers/studies'
 
 class Timeline extends React.Component {
-
-    shouldComponentUpdate(nextProps) {
-        // console.log(nextProps);
-        return this.props.item !== nextProps.item;
-    }
 
     render() {
         console.log(this.props);
@@ -35,11 +29,9 @@ class Timeline extends React.Component {
 }
 
 const mapStateToProps = state => {
-    const {item} = fetchOpenItem;
 
     return {
         ...state,
-        'item' : item,
         'studies': [
             {
                 'year'  : '2015-2018',
