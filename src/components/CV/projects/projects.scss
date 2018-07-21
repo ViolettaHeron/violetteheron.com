@@ -1,5 +1,21 @@
 @import '../../../scss/variables.scss';
+@import '../../../scss/flex.scss';
 
 .projects--title-icon {
     margin-right : 7px;
+}
+
+.projects--list {
+    @include flexbox;
+}
+
+.projects--list--single-project {
+    color           : $highlights;
+    text-decoration : none;
+    border          : solid red 1px;
+    display         : block;
+
+    @include flex-basis(300px);
+    @include flex-shrink(0);
+    @include flex-grow(1);
 }
