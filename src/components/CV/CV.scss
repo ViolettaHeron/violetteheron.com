@@ -37,7 +37,7 @@
 .projects--container {
     display : block;
 
-    @include flex(480px 0 0);
+    @include flex(480px 1 1);
 }
 
 @media (max-width : 500px) {

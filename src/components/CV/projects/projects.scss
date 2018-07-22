@@ -10,9 +10,9 @@
 }
 
 .projects--list--single-project {
-    color           : $highlights;
+    color           : $dark-highlights;
+    font-weight     : bold;
     text-decoration : none;
-    border          : solid red 1px;
     display         : block;
 
     @include flex-basis(300px);

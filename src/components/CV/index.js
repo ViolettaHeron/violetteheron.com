@@ -20,7 +20,7 @@ class CV extends React.Component {
                     </div>
                 </div>
                 <div className="CV-thunk">
-                    <div className="project--container">
+                    <div className="projects--container">
                         <Projects/>
                     </div>
                 </div>
