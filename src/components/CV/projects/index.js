@@ -14,16 +14,28 @@ class Projects extends React.Component {
             </h2>
             <div className="projects--list">
                 {this.props.projects.map((item, i) => (
-                    <div key={i} className="projects--list--single-project">{item.displayName}</div>
+                    <div onClick={() => this.openOverlay(item.label)} key={i} className="projects--list--single-project">
+                        <p className="projects--list--project-title">{item.displayName}</p>
+                        {item.tags.map((tag, t) => (<span className="projects--list--project-tag" key={t}>{tag}</span>))}
+                    </div>
                 ))}
+            </div>
+            <div className="projects--overlay">
+
             </div>
         </div>;
     };
+
+    openOverlay = (project) => {
+        const {dispatch} = this.props;
+        console.log(dispatch);
+        console.log(project);
+    }
 }
 
 // tags
 const TAG_GAME   = 'game';
-const TAG_JS     = 'js';
+const TAG_JS     = 'native js';
 const TAG_CSS    = 'css';
 const TAG_SMALL  = 'small';
 const TAG_CANVAS = 'canvas';

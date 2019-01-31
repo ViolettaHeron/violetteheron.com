@@ -6,3 +6,12 @@ $highlights-minor : #F3D55B;
 
 /* SIZES */
 $max-app-width : 1200px;
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Raleway|Poppins');
+@import url('https://fonts.googleapis.com/css?family=Jura|Lobster');
+
+$Poppins : 'Poppins', sans-serif;
+$Raleway : 'Raleway', sans-serif;
+$Lobster : 'Lobster', sans-serif;
+$Jura : 'Jura', sans-serif;

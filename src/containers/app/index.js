@@ -14,17 +14,15 @@ class App extends React.Component {
             <div>
                 <main>
                     <Route component={Header}/>
-                    <Route exact={true} component={CV}/>
+                    <Route exact={true} path="/" component={CV}/>
                 </main>
-                <Background />
+                <Route Route exact={true} path="/" component={Background}/>
             </div>
         );
     }
 }
 
 /*
-*
-*
                 <Route exact path="/about-us" component={About}/>
 * */
 

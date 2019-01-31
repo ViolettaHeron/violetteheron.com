@@ -14,16 +14,19 @@ body {
 }
 
 body, #root {
-    min-height : 100vh;
+    min-height  : 100vh;
+    font-family : $Raleway;
 }
 
 h1 {
-    font-size : 25px;
+    font-size   : 26px;
+    font-family : $Poppins;
 }
 
 h2 {
-    color     : $dark-highlights;
-    font-size : 20px;
+    color       : $dark-highlights;
+    font-size   : 22px;
+    font-family : $Poppins;
 }
 
 main {
